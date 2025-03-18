@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Página web</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<div sec:authorize="isAuthenticated()">
+    <h1 th:inline="text">Hola <span th:remove="tag" sec:athentication="name"></span>!</h1>
+    <h2>Seguridad implementada con Spring Security</h2>
+</div>
+
+</body>
+
+</html>

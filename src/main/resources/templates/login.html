@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<title>
+    
+</title>
+<body>
+
+  <div th:if="${param.error}">
+    Credenciales inválidas!
+  </div>
+
+  <div th:if="${param.logout}">
+    Sesión finalizada.
+  </div>
+
+  <div class="form">
+      <form class="login-form" th:action="@{/login}" method="post">
+        <input type="text" placeholder="name" name="username"/>
+        <input type="password" placeholder="password" name="password"/>
+        <input type="text" placeholder="email address"/>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+  </script>
+</body>
