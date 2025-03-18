@@ -9,7 +9,11 @@
 
 <div sec:authorize="isAuthenticated()">
     <h1 th:inline="text">Hola <span th:remove="tag" sec:athentication="name"></span>!</h1>
-    <h2>Seguridad implementada con Spring Security</h2>
+    <h2>Eventos</h2>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" >Salir</button>
+    </form>
 </div>
 
 </body>

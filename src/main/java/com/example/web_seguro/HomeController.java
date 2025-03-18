@@ -21,4 +21,10 @@ public class HomeController {
         return "Home";
     }
     
+    @GetMapping("/logout")
+    public String logout(@RequestParam(name="name", required=false, defaultValue = "Seguridad y calidad en el Desarrollo") String name, Model model) {
+        model.addAttribute("name", name);
+        return "login";
+    }
+
 }
